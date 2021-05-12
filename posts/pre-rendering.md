@@ -1,6 +1,6 @@
 ---
 title: 'Next.js Pre-rendering'
-date: '2021-05-12'
+date: '2021-05-11'
 ---
 
 ### Pre-rendering
