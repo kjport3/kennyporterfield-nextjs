@@ -29,10 +29,6 @@ export default function Home({ allPostsData }) {
           books last year. And I am currently a Senior Campaign Developer at
           Digital Additive.{" "}
         </p>
-        <p>
-          (This is a sample website - I built this going through the{" "}
-          <a href="https://nextjs.org/learn">Next.js tutorial</a>.)
-        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
