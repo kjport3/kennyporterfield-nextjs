@@ -19,6 +19,11 @@ export default function Home() {
           Digital Additive.{" "}
         </p>
         <p>
+          <Link href="/posts/first-post">
+            <a>First post!</a>
+          </Link>
+        </p>
+        <p>
           (This is a sample website - I built this going through the{" "}
           <a href="https://nextjs.org/learn">Next.js tutorial</a>.)
         </p>
