@@ -16,10 +16,10 @@ export default function Layout({ children, home }) {
           name="description"
           content="Kenny Porterfield's website using Next.js and Vercel"
         />
-        {/* <meta
+        <meta
           property="og:image"
-          content="/images/kp-logo-white-solid.png"
-        /> */}
+          content="/images/nextjs-homepage.png"
+        />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
