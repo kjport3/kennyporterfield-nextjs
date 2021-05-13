@@ -26,7 +26,7 @@ img {
   display: block;
 }
 
-code {
+pre code {
     display: inline-block;
     width: 100%;
     overflow: scroll;
