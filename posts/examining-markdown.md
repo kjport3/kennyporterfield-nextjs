@@ -1,5 +1,5 @@
 ---
-title: 'Examining Markdown Output in Next.js Site'
+title: 'Styling Markdown Output'
 date: '2021-05-02'
 image: '/images/markdown.jpg'
 ---
