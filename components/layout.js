@@ -25,9 +25,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
+      {home ? (
+        <>
+          <header className={styles.homeHeader}>
             <Image
               priority
               src="/images/profile.jpg"
@@ -37,29 +37,34 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+          </header>
+        </>
+      ) : (
+        <>
+          <header className={styles.header}>
+            <div>
+              <h2 className={utilStyles.headingLgInline}>
+                <Link href="/">
+                  <a className={utilStyles.colorInherit}>Home</a>
+                </Link>
+              </h2>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>
+                  <Image
+                    priority
+                    src="/images/profile.jpg"
+                    className={utilStyles.navImage}
+                    height={60}
+                    width={60}
+                    alt={name}
+                  />
+                </a>
               </Link>
-            </h2>
-          </>
-        )}
-      </header>
+            </div>
+          </header>
+        </>
+      )}
+
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

@@ -5,7 +5,7 @@ image: '/images/nextjs.jpg'
 ---
 
 ### Pre-rendering
-Next.js [*pre-renders*](https://nextjs.org/docs/basic-features/pages#pre-rendering). every page by default. This means Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. This can result in better performance and better search engine optimization (SEO). 
+Next.js [*pre-renders*](https://nextjs.org/docs/basic-features/pages#pre-rendering) every page by default. This means Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. This can result in better performance and better search engine optimization (SEO). 
 
 Each generated HTML is associated with the minimal JS code necessary for that page. When a page is loaded by the browser, its JavaScript code runs and makes the page fully interactive, a process called *hydration*.
 

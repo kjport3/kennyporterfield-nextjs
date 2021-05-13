@@ -8,9 +8,9 @@ import Date from "../components/date";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CodeIcon from "@material-ui/icons/Code";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from '@material-ui/icons/Instagram';
-import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
-import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import InstagramIcon from "@material-ui/icons/Instagram";
+import DirectionsRunIcon from "@material-ui/icons/DirectionsRun";
+import ImportContactsIcon from "@material-ui/icons/ImportContacts";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -96,19 +96,26 @@ export default function Home({ allPostsData }) {
           Digital Additive.{" "}
         </p>
       </section>
-      <section className={`${utilStyles.alignCenter} ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section
+        className={`${utilStyles.alignCenter} ${utilStyles.headingMd} ${utilStyles.padding1px}`}
+      >
         <h2 className={utilStyles.headingLg}>Blog Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, image }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Image
-                priority
-                src={image}
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
-                alt={title}
-              /><br />
+              <Link href={`/posts/${id}`}>
+                <a>
+                  <Image
+                    priority
+                    src={image}
+                    className={utilStyles.borderCircle}
+                    height={144}
+                    width={144}
+                    alt={title}
+                  />
+                </a>
+              </Link>
+              <br />
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Date from "../../components/date";
+import Image from "next/image";
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
@@ -28,7 +29,17 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <div className={utilStyles.imageContainer}>
+          <Image
+              priority
+              src={postData.image}
+              className={utilStyles.borderCircle} 
+              height={204}
+              width={204}
+              alt={postData.title}
+            />
+        </div>
+        <h1 className={utilStyles.blogHeader}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
