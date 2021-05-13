@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/images/kp-logo-white-solid.png" />
+        <link rel="icon" href="/images/kp-logo-white-solid.png" type="image/icon" />
         <meta
           name="description"
           content="Kenny Porterfield's website using Next.js and Vercel"
