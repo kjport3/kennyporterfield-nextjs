@@ -1,6 +1,7 @@
 ---
 title: 'Analyzing the Performance of Builtin JavaScript Data Structures'
 date: '2021-05-04'
+image: '/images/data-structures.jpg'
 ---
 
 # Objects

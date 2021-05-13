@@ -1,6 +1,7 @@
 ---
 title: 'Frequency Counter Algorithm Strategy'
 date: '2021-05-06'
+image: '/images/frequencies.jpg'
 ---
 
 ### Frequency Counter

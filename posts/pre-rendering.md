@@ -1,6 +1,7 @@
 ---
 title: 'Next.js Pre-rendering'
 date: '2021-05-11'
+image: '/images/nextjs.jpg'
 ---
 
 ### Pre-rendering

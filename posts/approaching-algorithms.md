@@ -1,6 +1,7 @@
 ---
 title: 'Algorithm Problem Solving Strategies'
 date: '2021-05-05'
+image: '/images/algorithms.png'
 ---
 
 # Intro

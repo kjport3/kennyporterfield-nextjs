@@ -63,6 +63,11 @@ pre code {
     border: 1px solid #f2f2f3;
     padding: 10px;
     border-radius: 10px;
+    color: #264653;
+}
+
+code {
+    color: #264653;
 }
 
 .icon-container {

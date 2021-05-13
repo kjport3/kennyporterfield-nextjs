@@ -1,6 +1,7 @@
 ---
 title: 'Dynamic Routes with Next.js'
 date: '2021-05-12'
+image: '/images/routing.jpg'
 ---
 
 ## Dynamic Routes 

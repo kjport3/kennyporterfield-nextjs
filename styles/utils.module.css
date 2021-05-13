@@ -25,6 +25,10 @@
   line-height: 1.5;
 }
 
+.alignCenter {
+  text-align: center;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
@@ -44,7 +48,10 @@
 }
 
 .listItem {
-  margin: 0 0 1.25rem;
+  display: inline-block;
+  width: 48%;
+  height: 280px;
+  vertical-align: top;
 }
 
 .lightText {

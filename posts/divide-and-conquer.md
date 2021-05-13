@@ -1,6 +1,7 @@
 ---
 title: 'Divide and Conquer Algorithm Strategy'
 date: '2021-05-09'
+image: '/images/divide-conquer.png'
 ---
 
 ### Divide and Conquer

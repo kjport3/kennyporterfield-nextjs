@@ -1,6 +1,7 @@
 ---
 title: 'Multiple Pointers Algorithm Strategy'
 date: '2021-05-07'
+image: '/images/pointer.png'
 ---
 
 ### Multiple Pointers

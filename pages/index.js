@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
@@ -95,11 +96,19 @@ export default function Home({ allPostsData }) {
           Digital Additive.{" "}
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.alignCenter} ${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog Posts</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, date, title, image }) => (
             <li className={utilStyles.listItem} key={id}>
+              <Image
+                priority
+                src={image}
+                className={utilStyles.borderCircle}
+                height={144}
+                width={144}
+                alt={title}
+              /><br />
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
@@ -107,6 +116,7 @@ export default function Home({ allPostsData }) {
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              <br />
             </li>
           ))}
         </ul>

@@ -1,6 +1,7 @@
 ---
 title: 'Sliding Windows Algorithm Strategy'
 date: '2021-05-08'
+image: '/images/window.jpg'
 ---
 
 ### Sliding Window
