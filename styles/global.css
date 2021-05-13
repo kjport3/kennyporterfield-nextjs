@@ -99,3 +99,9 @@ code {
     display: inline-block;
     margin: 0px 10px;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.45em;
+    }
+  }
