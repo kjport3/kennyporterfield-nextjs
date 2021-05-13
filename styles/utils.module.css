@@ -54,6 +54,14 @@
   vertical-align: top;
 }
 
+@media (max-width: 768px) {
+  .listItem {
+    width: 100%;
+    height: auto;
+    margin-bottom:20px;
+  }
+}
+
 .lightText {
   color: #666;
 }
