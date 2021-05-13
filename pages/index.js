@@ -3,7 +3,13 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
-import Date from '../components/date'
+import Date from "../components/date";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import CodeIcon from "@material-ui/icons/Code";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from '@material-ui/icons/Instagram';
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,6 +27,64 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <div className="icon-container">
+          <ul className="social-links">
+            <li>
+              <a
+                href="https://github.com/kjport3"
+                target="_blank"
+                className="icons"
+              >
+                <GitHubIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kenporterfield/"
+                target="_blank"
+                className="icons"
+              >
+                <LinkedInIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kenny_yom/"
+                target="_blank"
+                className="icons"
+              >
+                <InstagramIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://codepen.io/kjport3/"
+                target="_blank"
+                className="icons"
+              >
+                <CodeIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.goodreads.com/user/show/28192247-kenny-porterfield"
+                target="_blank"
+                className="icons"
+              >
+                <ImportContactsIcon />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.strava.com/athletes/4032470"
+                target="_blank"
+                className="icons"
+              >
+                <DirectionsRunIcon />
+              </a>
+            </li>
+          </ul>
+        </div>
         <p>
           Hello! My name is Kenny Porterfield and I am a web developer living in
           Atlanta, Georgia. I like to spend my time running, reading, learning,
@@ -36,14 +100,14 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
+              <Link href={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
           ))}
         </ul>
       </section>
