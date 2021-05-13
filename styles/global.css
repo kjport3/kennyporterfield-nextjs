@@ -28,5 +28,8 @@ img {
 
 code {
     display: inline-block;
-    width: 300px;
+    width: 100%;
+    overflow: scroll;
+    border: 1px solid #f2f2f3;
+    padding: 10px;
 }
