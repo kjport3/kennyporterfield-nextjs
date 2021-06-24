@@ -4,6 +4,11 @@ import Image from "next/image";
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import hljs from "highlight.js";
+import javascript from "highlight.js/lib/languages/javascript";
+import { useEffect } from "react";
+
+hljs.registerLanguage("javascript", javascript);
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -23,21 +28,30 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  useEffect(() => {
+    hljs.initHighlighting();
+  }, []);
+
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link
+          rel="stylesheet"
+          href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/default.min.css"
+        ></link>
+        <link rel="stylesheet" href="/dracula.css"></link>
       </Head>
       <article>
         <div className={utilStyles.imageContainer}>
           <Image
-              priority
-              src={postData.image}
-              className={utilStyles.borderCircle} 
-              height={204}
-              width={204}
-              alt={postData.title}
-            />
+            priority
+            src={postData.image}
+            className={utilStyles.borderCircle}
+            height={204}
+            width={204}
+            alt={postData.title}
+          />
         </div>
         <h1 className={utilStyles.blogHeader}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
