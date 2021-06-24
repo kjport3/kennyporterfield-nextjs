@@ -21,6 +21,7 @@ export default function Layout({ children, home }) {
           content="/images/nextjs-homepage.png"
         />
         <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:image" content="/images/nextjs-homepage.png"></meta>
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {home ? (

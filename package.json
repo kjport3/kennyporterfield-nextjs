@@ -20,7 +20,8 @@
     "react-dom": "17.0.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "sass": "^1.32.13"
+    "sass": "^1.32.13",
+    "swagger": "^0.7.5"
   },
   "devDependencies": {
     "@types/node": "^15.0.3",
